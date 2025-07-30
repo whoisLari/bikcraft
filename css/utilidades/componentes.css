@@ -13,7 +13,6 @@
   padding: 16px 32px;
   background: var(--btn-gradient);
   border-radius: 4px;
-  box-shadow: 0 1px 2px rgb(0, 0, 1);
   text-transform: uppercase;
   color: var(--p5);
   font: 600 1.125rem/1.35 "Poppins", sans-serif;
@@ -21,6 +20,22 @@
 }
 .botao:hover {
   background: var(--btn-gradient-hover);
+}
+.botao.seta {
+  display: flex;
+  align-items: center;
+}
+.botao.seta::after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 10px;
+  margin-left: 12px;
+  background: url("../../img/icones/seta.svg");
+  transition: transform 0.2s;
+}
+.botao.seta:hover::after {
+  transform: translateX(4px);
 }
 
 .botao.secundario {
@@ -52,4 +67,25 @@
 }
 .link:hover {
   color: var(--w);
+}
+
+/* titulo internos */
+.titulo-bg {
+  background: var(--c11);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.titulo p {
+  margin-bottom: 4px;
+}
+@media (max-width: 800px) {
+  .titulo-bg {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .titulo p {
+    font-size: 1rem;
+    text-transform: lowercase;
+    font-weight: 400;
+  }
 }
