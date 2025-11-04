@@ -31,6 +31,7 @@
   display: grid;
   gap: 8px;
   border-left: 2px solid var(--c2);
+  padding-left: 6px;
 }
 .lojas-tempo {
   display: flex;
